@@ -100,36 +100,4 @@ Cena-v2-Projeto
 └── README.md                # Documentação
 
 
-# Controles: 
-Jogadoe 1: 
-Mover: W A S D
-Objetivo: Gol da Direita 
 
-Joagor 2: 
-Mover: Setas Direcionais
-Objetivo: Gol Esquerda
-
-Aperte o botão JOGAR AGORA na tela inicial para começar a partida
-
-# Instalção e Exwcução: 
-Esses comandos são iniciado sno terminal (CRTL + SHIFT +')
-Dependencias: 
-npm install: 
-Iniciar servidor local: 
-npx vite
-
-### Recursos Utilizados:
-
-Three.js: Biblioteca gráfica principal.
-
-Mixamo (Adobe): Animações de esqueleto (Idle/Run).
-
-Kenney Assets: Modelos 3D Low Poly.
-Textura da grama: https://github.com/orgs/community/discussions/58455
-
-### Documentação utilizada:
-AnimationAction: https://threejs.org/docs/#AnimationAction 
-Mixamo: https://www.mixamo.com/#/ 
-ThreeJs: https://threejs.org/docs/ 
-
-Link do Video: https://drive.google.com/file/d/1YnMFwzWUIwIKS21U0_Tz4og1yNV71dXv/view?usp=sharing
