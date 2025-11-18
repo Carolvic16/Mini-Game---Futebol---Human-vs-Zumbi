@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanos vs Zumbis: A Copa Final</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: 'Arial', sans-serif; background-color: #000; }
+        
+        /* --- TELA INICIAL (MENU) --- */
+        #tela-inicial {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 20; 
+            color: white;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px red;
+            margin-bottom: 10px;
+        }
+
+        p { font-size: 1.5rem; color: #ccc; margin-bottom: 40px; }
+
+        #btn-play {
+            padding: 20px 60px;
+            font-size: 2rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 0 15px #28a745;
+        }
+        #btn-play:hover { transform: scale(1.1); background-color: #218838; }
+
+        /* --- PLACAR --- */
+        #placar {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000;
+            z-index: 5;
+            display: none; 
+            pointer-events: none; 
+        }
+
+        /* --- BOTÕES DE CÂMERA --- */
+        #camera-controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 5;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-cam {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #000;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .btn-cam:hover { background: white; }
+
+    </style>
+</head>
+<body>
+
+    <div id="tela-inicial">
+        <h1>Zumbis vs Humanos</h1>
+        <p>Use <b>WASD</b> (Zumbi) e <b>Setas</b> (Humano)</p>
+        <button id="btn-play">JOGAR AGORA</button>
+    </div>
+
+    <div id="placar">
+        🧟 <span id="score-zumbi">0</span> x <span id="score-humano">0</span> 🙎‍♂️
+    </div>
+    <div id="mensagem-gol" style="display: none; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); font-size: 6rem; color: gold; font-weight: bold; text-shadow: 0 0 20px black; z-index: 100;">
+    GOOOOL!
+</div>
+
+    <div id="camera-controls">
+        <button id="btn-panoramica" class="btn-cam">Visão TV</button>
+        <button id="btn-split" class="btn-cam">Tela Dividida</button>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+
+</body>
+</html>
